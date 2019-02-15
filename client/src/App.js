@@ -95,8 +95,9 @@ class App extends Component {
       .then(data => data.json())
       .then(res => this.setState({ zipCode: res.data[0].post_code }));
 
-
+// outputs zipCode into console
     console.log(this.state.zipCode, "POST CODE");
+    
     axios.post("http://localhost:3001/api/updateData",  {
       id: objIdToUpdate,
       update: { firstName : firstName, lastName: lastName, address:address, username: username, zipCode:this.state.zipCode}

@@ -94,6 +94,14 @@ class App extends Component {
     fetch("https://postit.lt/data/?term=" + address + ",+Vilnius&key=kCyqzcxCgyAbglGGU9V2")
       .then(data => data.json())
       .then(res => this.setState({ zipCode: res.data[0].post_code }));
+    
+    /* async function getTop100Campers() {
+    const response = await fetch(apiUrl);
+    const json = await response.json();
+    
+    console.log(json[0]);
+}
+*/
 
 // outputs zipCode into console
     console.log(this.state.zipCode, "POST CODE");
